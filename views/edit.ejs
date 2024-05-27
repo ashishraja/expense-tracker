@@ -1,0 +1,38 @@
+<%- include("partials/header") -%>
+    <div class="expense-div">
+        <section class="expense">
+            <div class="content">
+                <form action="/edit/<%= newListItem.id  %>" method="POST">
+                    <h1 class="heading">
+                        <%= editTitle %>
+                    </h1>
+
+                    <label for="html">Category</label><br>
+                    <select class="expense-input select" name="updatedCategory" id="category">
+                        <option value="Expense" <%=newListItem.category==='Expense' ? 'selected' : '' %>>Expense
+                        </option>
+                        <option value="Income" <%=newListItem.category==='Income' ? 'selected' : '' %>>Income</option>
+                    </select>
+                    <br>
+
+                    <label for="html">Amount</label><br>
+                    <input name="updatedAmount" value="<%= newListItem.amount %>" class="expense-input"
+                        placeholder="Enter your income or expense number" type="number" /><br>
+
+                    <label for="html">Item Name</label><br>
+                    <input value="<%= newListItem.item %>" class="expense-input" name="updatedItem"
+                        placeholder="Enter your item name" type="text" /><br>
+
+                    <label for="html">Date</label><br>
+                    <input class="expense-input" name="updatedDate"
+                        value="<%= new Date(newListItem.date).toISOString().split('T')[0] %>" type="date" /><br>
+
+                    <button type="submit" class="expense-btn">
+                        <span>Update</span>
+                    </button><br>
+
+                </form>
+            </div>
+        </section>
+    </div>
+    <%- include("partials/footer") -%>
