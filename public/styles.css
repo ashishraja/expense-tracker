@@ -1,0 +1,192 @@
+body{
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    height: 100vh;
+    margin:0;
+    padding:0;
+    font-family: 'helvetica neue';
+}
+.expense-div{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success .content2 .heading{
+    display: flex;
+    flex-direction: column;
+    padding:0 200px;
+    font-size:30px;
+    color:black;
+}
+.expense{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border:1px solid white;
+    box-shadow: 0px 0px -20px white;    
+    height:max-content;
+    width:max-content;
+    border-radius:5px;
+    box-shadow: 0px 0px 5px white;
+    padding:25px 25px 30px 25px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    color:#A683E3;
+    text-align: center;
+    margin-bottom:35px;
+}
+.expense-input{
+    padding:11px 8px;
+    border:1px solid #d4d4d4;
+    margin:10px 0;
+    width:232px;
+    border-radius: 5px;
+}
+.select{
+    width:249px;
+}
+.expense-input::placeholder{
+    color:#d4d4d4;
+}
+
+.expense-input:focus{
+    outline: none !important;
+    border-color: #A683E3;
+    box-shadow: 0 0 10px #A683E3;
+}
+
+.expense-btn{
+    color:white;
+    background-color:#A683E3;
+    width:250px;
+    font-size: 16px;
+    border:0px solid white;
+    border-radius: 5px;
+    padding:11px 0;
+    margin:8px 0vw;
+    cursor:pointer;
+}
+
+.expense-btn:hover{
+    color:#A683E3;
+    border:1px solid #A683E3;
+    background-color:white;
+}
+
+label{
+    color:#A683E3;
+    font-weight: bold;
+}
+
+.expense-box{
+    font-size: 13px;
+    text-align: center;
+    margin:2px;
+}
+a{
+    text-decoration: none;
+    color: #A683E3;
+    font-size: 13px;
+}
+@media screen and (min-width:1024px){
+    .expense-input{
+        width:330px;
+    }
+    .select{
+        width:347px;
+    }
+    .expense-btn{
+        width:348px;
+    }
+    .box:first-child h1{
+        font-size:30px;
+    }
+    .box:first-child a{
+        background-color: #A683E3;
+        color:white;
+        margin:10px;
+        padding:12px 40px;
+        font-size:23px;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:10px 20px;
+}
+.box a{
+    padding-top:10px;
+    color:#A683E3;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.box a span{
+    font-size: 10px;
+    padding-left:5px;
+}
+.tablecell{
+    padding:10px 20px;
+    border-bottom:1px solid black;
+}
+.box{
+    margin:2vw;
+    border:2px solid black;
+    border-radius: 10px;
+}
+
+.box:last-child{
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+table{
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+.box:last-child:-webkit-scrollbar {
+    display: none;  
+}
+
+table thead tr{
+    padding:10px;
+}
+table thead tr th{
+    padding:20px;
+    text-align: left;
+    border-bottom:1px solid black;
+}
+.box h1{
+    text-align: left;
+    font-size:16px;
+}
+tfoot tr th{
+    padding:20px;
+    font-size:20px;
+}
+.tablecell button{
+    background-color: red;
+    padding:12px 20px;
+    border:0;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size:17px;
+    margin-top:13px;
+}
+
+
+
+
+
+
+

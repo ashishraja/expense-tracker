@@ -1,0 +1,61 @@
+<head>
+    <meta charset="utf-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="box header" id="heading">
+        <h1>
+            <%= listTitle %>
+        </h1>
+        <a href="/">Add More</a>
+    </div>
+
+    <div class="box">
+
+
+        <table cellSpacing="0" border="0">
+            <thead>
+                <tr colSpan="*">
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Item Info</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <% newListItems.map(function(item,index){ %>
+                <tbody>
+                    <tr colSpan="*">
+                        <td class="tablecell">
+                            <%= item.category %>
+                        </td>
+                        <td class="tablecell">
+                            <%= item.amount %>
+                        </td>
+                        <td class="tablecell">
+                            <%= item.item %>
+                        </td class="tablecell">
+                        <td class="tablecell">
+                            <%= item.date.toLocaleString("en-us", { year: "numeric" , day: "numeric" , month: "long" })
+                                %>
+                        </td>
+                        <td class="tablecell">
+                            <form action="/delete" method="post">
+                                <button type="submit"  name="delete" value="<%= item._id %>" onChange="this.form.submit()">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+                <% });%>
+
+                    <tfoot>
+                        <tr>
+                            <th style="text-align:left" colspan="5">Total Amount is : <%=totalAmount%>
+                            </th>
+                        </tr>
+                    </tfoot>
+        </table>
+    </div>
+</body>

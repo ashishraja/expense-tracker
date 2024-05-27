@@ -1,0 +1,33 @@
+<%- include("partials/header") -%>
+<div class="expense-div">
+    <section class="expense">
+        <div class="content">
+            <form action="/" method="POST">
+                <h1 class="heading">Expense Tracker</h1>
+
+                <label for="html">Category</label><br>
+                <select class="expense-input select" name="category" id="cars">
+                    <option value="Expense">Expense</option>
+                    <option value="Income">Income</option>
+                </select>
+                <br>
+
+                <label for="html">Amount</label><br>
+                <input required name="amount" class="expense-input" placeholder="Enter your income or expense number"
+                    type="number" /><br>
+
+                <label for="html">Item Name</label><br>
+                <input required class="expense-input" name="item" placeholder="Enter your item name" type="text" /><br>
+
+                <label for="html">Date</label><br>
+                <input required class="expense-input" name="date" type="date" /><br>
+
+                <button type="submit" class="expense-btn">
+                    <span>Add</span>
+                </button><br>
+
+            </form>
+        </div>
+    </section>
+</div>
+<%- include("partials/footer") -%>
