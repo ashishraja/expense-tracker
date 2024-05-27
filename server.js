@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('public'));
 
-mongoose.connect("mongodb://localhost:27017/expenseDatabase");
+mongoose.connect(process.env.DB_URI);
 var totalAmount = 0;
 const expenseSchema = mongoose.Schema({
     amount: {
@@ -95,6 +95,6 @@ app.post("/delete", async function (req, res) {
 });
 
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+app.listen(process.env.PORT , () => {
+    console.log(`Server is running on port : ${process.env.PORT}`);
 });
